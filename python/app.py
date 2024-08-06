@@ -106,8 +106,6 @@ def umsatzrechner_2023():
     else:
         return "Es gibt ein Problem bei der Datenbankverbindung. Die Seite wird aus Sicherheitsgründen nicht geladen.", 500
 
-######  ZUKÜNFTIGE AUSLAGERUNG ######
-
 @app.route('/acp/')
 def hallo_acp():
     return render_template('acp_index.html', bereich='Administrationsbereich', pageTitle='Startseite der Administrationsoberfläche')
@@ -236,8 +234,6 @@ def acp_umsatz_2023_delete(id):
         return redirect('/acp/umsatzrechner/2023/')
     else:
         return "Es gibt ein Problem bei der Datenbankverbindung. Die Seite wird aus Sicherheitsgründen nicht geladen.", 500
-
-######  ZUKÜNFTIGE AUSLAGERUNG ######
 
 if __name__ == '__main__':
     app.run(debug=True)
