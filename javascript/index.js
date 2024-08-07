@@ -1,1 +1,2 @@
-console.log("JavaScript wird die dritte Instanz auf CodeVoyage.de werden.")
+
+alert('Hello World');
