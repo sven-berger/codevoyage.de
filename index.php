@@ -5,7 +5,7 @@
 ?>
 
 <script>
-        document.write("JavaScript wird die dritte Instanz auf CodeVoyage.de werden.");
+    document.write("JavaScript wird die dritte Instanz auf CodeVoyage.de werden.");
 </script>
 
 <?php
