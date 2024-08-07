@@ -5,7 +5,6 @@
 
 <?php
     echo $sidebarLeft;
-    echo $sidebarRight;
 ?>
 
 </div>
