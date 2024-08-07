@@ -41,6 +41,10 @@ a, a:hover {
     border: 1px solid #ccc;
 }
 
+.sidebarBox-last {
+    margin-bottom: 20px;
+}
+
 .main > nav, 
 .main > aside {
     background-color: #F5F7FF;
