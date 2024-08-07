@@ -4,9 +4,7 @@
     require_once ($_SERVER['DOCUMENT_ROOT'] . "/php/includes/index.header.inc.php");
 ?>
 
-<script>
-    document.write("JavaScript wird die dritte Instanz auf CodeVoyage.de werden.");
-</script>
+<script src="/javascript/index.js"></script>
 
 <?php
     require_once ($_SERVER['DOCUMENT_ROOT'] . "/php/includes/footer.inc.php");
