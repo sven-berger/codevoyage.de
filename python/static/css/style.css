@@ -50,6 +50,7 @@ a, a:hover {
 
 .main > nav, 
 .main > aside {
+    flex: 0 0 15vw;
     background-color: #F5F7FF;
     border: 1px solid #D8DAE1;
 }
