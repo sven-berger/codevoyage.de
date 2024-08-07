@@ -37,7 +37,6 @@ a, a:hover {
 
 .main > nav, 
 .main > aside {
-    flex: 0 0 20vw;
     background-color: #F5F7FF;
     border: 1px solid #D8DAE1;
 }
@@ -61,7 +60,7 @@ a, a:hover {
     margin: 0 5px;
 }
 
-.header, .footer, .content, nav, aside {
+.header, .footer, .main > .content {
     padding: 1em;
 }
 
