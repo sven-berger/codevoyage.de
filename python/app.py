@@ -41,7 +41,7 @@ def get_db_connection():
 
 @app.route('/')
 def hallo():
-    return "Es gibt ein Problem bei der Datenbankverbindung. Die Seite wird aus Sicherheitsgründen nicht geladen.", 500
+    return render_template('index.html', bereich='Python-Bereich', pageTitle='Startseite der Python-Instanz')
 
 @app.route('/database-test/')
 def test():
