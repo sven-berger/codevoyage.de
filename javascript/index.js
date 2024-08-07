@@ -1,1 +1,1 @@
-console.log("CodeVoyage.de wird bald mit JavaScript weiterentwickelt werden.")
+console.log('CodeVoyage.de wird bald mit JavaScript weiterentwickelt werden.');
