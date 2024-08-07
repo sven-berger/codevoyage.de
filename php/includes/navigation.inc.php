@@ -4,6 +4,7 @@
     <a href="https://codevoyage.de/" <?php if ($bereich === 'Startseite'): ?> class="active"<?php endif; ?>>Startseite</a>
     <a href="https://php.codevoyage.de/" <?php if ($bereich === 'PHP-Bereich'): ?> class="active"<?php endif; ?>>PHP-Bereich</a>
     <a href="https://python.codevoyage.de">Python-Bereich</a>
+    <a href="https://typo3.codevoyage.de" target="_blank">Typo3-Instanz</a>
     <a href="https://the-supernatural.de/blog/blog-entry-list/2-am-mut-h%C3%A4ngt-der-erfolg-codevoyage-de/" target="_blank">Mein Blog 🫡🧠</a>
     <a href="https://codevoyage.de/acp/" <?php if ($bereich === 'Administrationsbereich'): ?> class="active"<?php endif; ?>>Administrationsbereich</a>
 </div>
