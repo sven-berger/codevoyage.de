@@ -73,7 +73,7 @@ a, a:hover {
     margin: 0 5px;
 }
 
-.header, .footer, .main > .content {
+.header, .footer, .sidebarBox, .main > .content {
     padding: 1em;
 }
 
