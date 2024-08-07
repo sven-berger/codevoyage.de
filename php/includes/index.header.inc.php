@@ -18,6 +18,8 @@
 <a href="https://codevoyage.de/">
     <h2 align="center">Willkommen auf meinem Apache-Webserver!</h2>
 </a>
+<script>console.log(`<h3 align="center">Diese Instanz läuft mit: <a href="https://nodejs.org/en/" style="color: darkred;" target="_blank">Node.js: v16.20.2</a></h3>`);
+</a></h3>
 <?php include($_SERVER['DOCUMENT_ROOT'] . "/php/includes/navigation.inc.php"); ?>
 </div>
 
