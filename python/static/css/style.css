@@ -35,6 +35,12 @@ a, a:hover {
     flex: 1;
 }
 
+.boxCapital {
+    padding: 1em;
+    background: yellow;
+    border: 1px solid #ccc;
+}
+
 .main > nav, 
 .main > aside {
     background-color: #F5F7FF;
