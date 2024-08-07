@@ -10,9 +10,7 @@
 <?php
     require_once ($_SERVER['DOCUMENT_ROOT'] . "/php/includes/database.inc.php");
     $mariadbVersion = getMariaDBVersion($connection);
-
     require_once ($_SERVER['DOCUMENT_ROOT'] . "/php/includes/var.inc.php");
-
 ?>
 
 <body>
@@ -21,7 +19,7 @@
 <a href="https://codevoyage.de/">
     <h2 align="center">Willkommen auf meinem Apache-Webserver!</h2>
 </a>
-<h3 align="center">Diese Instanzen laufen mit <a href="https://mariadb.org/" style="color: darkred;" target="_blank">MariaDB <?php echo $mariadbVersion; ?></a></h3>
+<h3 align="center">Diese Instanzen verwenden <a href="https://mariadb.org/" style="color: darkred;" target="_blank">MariaDB <?php echo $mariadbVersion; ?></a></h3>
 </a></h3>
 <?php include($_SERVER['DOCUMENT_ROOT'] . "/php/includes/navigation.inc.php"); ?>
 </div>
