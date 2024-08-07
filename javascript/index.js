@@ -1,1 +1,1 @@
-alert('Hello World');
+console.log("CodeVoyage.de wird bald mit JavaScript weiterentwickelt werden.")
