@@ -336,3 +336,8 @@ form button {
 .list-status-todo {
     color: red;
 }
+
+.notice {
+    font-weight: 400;
+    font-style: italic;
+}
