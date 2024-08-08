@@ -34,8 +34,8 @@
 <h3 class="boxTitle">Flask herunterladen und starten</h3>
 <section class="section">
 <div class="sectionContent">
-<p style="font-weight: 400;">sudo apt install python3 python3-pip python3-venv libapache2-mod-wsgi-py3</p>
-<p class="notice"></p>
+<p>sudo apt install python3 python3-pip python3-venv libapache2-mod-wsgi-py3</p>
+<p class="notice">Dies gilt für Ubuntu. Die Warhrscheinlichkeit, dass Debian mehr Pakete benötigt, ist gegeben.</p>
 <p><br/></p>
 <p>cd <span style="font-weight: bold; color:darkred;">/verzeichnis-in-dem-flask-ausgeführt werden soll/</span></p>
 <p><br/></p>
