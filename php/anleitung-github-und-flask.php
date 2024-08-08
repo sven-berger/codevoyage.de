@@ -36,6 +36,7 @@
 <div class="sectionContent">
 <p>sudo apt install python3 python3-pip python3-venv libapache2-mod-wsgi-py3</p>
 <p><small>Dies gilt für Ubuntu. Die Warhrscheinlichkeit, dass Debian mehr Pakete benötigt, ist gegeben.</small></p>
+<p><br/></p>
 <p>cd <span style="font-weight: bold; color:darkred;">/verzeichnis-in-dem-flask-ausgeführt werden soll/</span></p>
 <p><br/></p>
 <p>python3 -m venv venv</p>
