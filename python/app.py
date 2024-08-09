@@ -52,7 +52,7 @@ def test():
         result = cursor.fetchone()
         cursor.close()
         connection.close()
-        return render_template('database-test.html', bereich='Python-Bereich', pageTitle='Verbindung zur Datenbank')
+        return render_template('database-test.html', bereich='Python-Bereich', pageTitle='Datenbanktest mit Python')
     else:
         return "Es gibt ein Problem bei der Datenbankverbindung. Die Seite wird aus Sicherheitsgründen nicht geladen.", 500
 
