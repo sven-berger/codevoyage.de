@@ -22,7 +22,7 @@
 <a href="https://codevoyage.de/">
     <h2 align="center">Willkommen auf meinem Apache-Webserver!</h2>
 </a>
-<h3 align="center">Diese Instanz läuft auf <a href="https://php.net" style="color: darkred;" target="_blank">PHP <?php echo htmlspecialchars($phpVersion); ?> (FPM)</a></h3>
+<h3 align="center">Diese Instanz läuft auf <a href="https://php.net" style="color: darkred;" target="_blank">PHP <?php echo $phpVersion; ?> (FPM)</a></h3>
 <?php include($_SERVER['DOCUMENT_ROOT'] . "/includes/navigation.inc.php"); ?>
 </div>
 
