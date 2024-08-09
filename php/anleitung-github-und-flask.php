@@ -20,15 +20,11 @@
 </section>
 
 <h3 class="boxTitle">MIT SERVER VERBINDEN UND VON GITHUB HERUNTERLADEN</h3>
-<section class="section">
-<pre><code class="language-bash">git clone https://github.com/username/repository.de.git</code></p>
-</section>
-<section class="section">
+<pre><code class="language-bash">git clone https://github.com/username/repository.de.git</code>
 <p class="notice">Bei Bedarf - Das sollte aber in der Regel nur einmal nötig sein</p>
 <pre><code class="language-bash">cd <span style="font-weight: bold; color:darkred;">./verzeichnis-mit-dem-eben-heruntergeladenen-github-repository/</span>
 git pull
 </code></pre>
-</section>
 
 <h3 class="boxTitle">Flask herunterladen und starten</h3>
 <section class="section">
