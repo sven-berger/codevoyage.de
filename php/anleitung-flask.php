@@ -20,7 +20,7 @@ deactivate</code></pre>
 <pre><code class="language-python">import sys
 import logging
 
-sys.path.insert(0, '<span style="font-weight: bold; color:darkred;">/verzeichnis-in-dem-python/flask-ausgeführt werden soll/</span>')
+sys.path.insert(0, '<span style="font-weight: bold; color:darkred;">/verzeichnis-in-dem-python-flask-ausgeführt werden soll/</span>')
 from app import app as application
 logging.basicConfig(stream=sys.stderr)</code></pre>
 

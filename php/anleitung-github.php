@@ -14,9 +14,9 @@ git push</code></pre>
 <h3 class="boxTitle">MIT SERVER VERBINDEN UND VON GITHUB HERUNTERLADEN</h3>
 <pre><code class="language-bash">ssh user@hostname.tld / IP
 
-cd <span style="font-weight: bold; color:darkred;">/verzeichnis-in-das-das-github-repository-kommen-soll/</span>
+cd <span style="font-weight: bold; color:darkred;">/verzeichnis-in-das-das-github-repository-kommen-soll/</span></code></pre>
 
-git clone https://github.com/username/repository.de.git</code></pre>
+<pre><code class="language-bash">git clone https://github.com/username/repository.de.git</code></pre>
 <p class="notice">Bei Bedarf - Das Herunterladen sollte aber in der Regel nur einmal nötig sein</p>
 <pre><code class="language-bash">cd <span style="font-weight: bold; color:darkred;">./verzeichnis-mit-dem-eben-heruntergeladenen-github-repository/</span>
 git pull</code></pre>
