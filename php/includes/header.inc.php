@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://codevoyage.de/python/static/css/style.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/default.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script>hljs.highlightAll();</script>
     <title><?php echo $pageTitle; ?></title>
 </head>

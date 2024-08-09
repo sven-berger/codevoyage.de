@@ -94,6 +94,13 @@ a, a:hover {
         list-style: none !important; 
         padding: 0 10px;
 
+        ::marker {
+            margin-right: 10px !important;
+            content: '\f0a9' ' ' !important;
+            font-family: FontAwesome;
+            color: #3579BD;
+        }
+
         li {
             margin: 10px 0 !important;
 
