@@ -84,6 +84,7 @@ a, a:hover {
     .boxTitle {
         margin-left: 10px;
     }
+
     .boxContent {
         border: 1px solid #D8DAE1;
         background: #fafafa;
@@ -240,9 +241,10 @@ input[type="reset"] {
 input[type="submit"] {
     background-color: #2980b9;
     color: #fff;
-    &:hover {
-        background-color: #2980b9;
-    }
+}
+
+input[type="submit"]:hover {
+    background-color: #2980b9;
 }
 
 label {
