@@ -7,7 +7,7 @@
 <h3 class="boxTitle">Flask und alle nötigen Pakete herunterladen und starten</h3>
 <pre><code class="language-bash">sudo apt install python3 python3-pip python3-venv libapache2-mod-wsgi-py3</code></pre>
 <p class="notice">Dies gilt für Ubuntu. Die Wahrscheinlichkeit, dass Debian mehr Pakete benötigt, ist gegeben</p>
-<pre><code class="language-bash">cd <span style="font-weight: bold; color:darkred;">/verzeichnis-in-dem-python-flask-ausgeführt werden soll/</span>
+<pre><code class="language-bash">cd <span style="font-weight: bold; color:darkred;">/verzeichnis-in-dem-flask-ausgeführt werden soll/</span>
 python3 -m venv venv
 source venv/bin/activate
 pip install Flask
@@ -19,7 +19,7 @@ deactivate</code></pre>
 <p style="font-weight: bold; color:darkred;">nano flaskapp.wsgi</p>
 <pre><code class="language-python">import sys
 
-sys.path.insert(0, '<span style="font-weight: bold; color:darkred;">/verzeichnis-in-dem-python-flask-ausgeführt werden soll/</span>')
+sys.path.insert(0, '<span style="font-weight: bold; color:darkred;">/verzeichnis-in-dem-flask-ausgeführt werden soll/</span>')
 from app import app as application</code></pre>
 
 <h3 class="boxTitle">App anlegen</h3>
@@ -35,9 +35,9 @@ if __name__ == '__main__':
     app.run(debug=True)</code></pre>
 
 <h3 class="boxTitle">Apache-Konfiguration <span style="font-weight: bold;">anpassen</span></h3>
-<pre><code class="apache">WSGIDaemonProcess flaskapp python-path=<span style="font-weight: bold; color:darkred;">/verzeichnis-mit-dem-flask-verzeichnis/</span>:/verzeichnis-mit-dem-flask-verzeichnis/venv/lib/python3.XX/site-packages
+<pre><code class="apache">WSGIDaemonProcess flaskapp python-path=/verzeichnis-mit-dem-flask-verzeichnis/:/verzeichnis-mit-dem-flask-verzeichnis/venv/lib/python3.XX/site-packages
 WSGIProcessGroup flaskapp
-WSGIScriptAlias / <span style="font-weight: bold; color:darkred;">/verzeichnis-mit-dem-flask-verzeichnis/</span>/flaskapp.wsgi</code></pre>
+WSGIScriptAlias / /<span style="font-weight: bold; color:darkred;">verzeichnis-in-dem-flask-ausgeführt werden soll</span>/flaskapp.wsgi</code></pre>
 
 <?php
     require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/footer.inc.php");
