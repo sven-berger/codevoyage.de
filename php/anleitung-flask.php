@@ -37,9 +37,9 @@ if __name__ == '__main__':
 
 <h3 class="boxTitle">Apache-Konfiguration <span style="font-weight: bold;">anpassen</span></h3>
 <pre><code class="apache">WSGIDaemonProcess flaskapp threads=5
-WSGIScriptAlias / /verzeichnis-der-python/flask-instanz/flaskapp.wsgi
+WSGIScriptAlias / /verzeichnis-der-python-flask-instanz/flaskapp.wsgi
 
-&lt;Directory /var/customers/webs/codevoyage/python&gt;
+&lt;Directory /verzeichnis-der-python-flask-instanz/&gt;
     Require all granted
 &lt;/Directory&gt;</code></pre>
 
