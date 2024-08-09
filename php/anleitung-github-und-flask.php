@@ -20,7 +20,7 @@
 </section>
 
 <h3 class="boxTitle">MIT SERVER VERBINDEN UND VON GITHUB HERUNTERLADEN</h3>
-<pre><code class="language-bash">git clone https://github.com/username/repository.de.git</code>
+<pre><code class="language-bash">git clone https://github.com/username/repository.de.git</code></pre>
 <p class="notice">Bei Bedarf - Das sollte aber in der Regel nur einmal nötig sein</p>
 <pre><code class="language-bash">cd <span style="font-weight: bold; color:darkred;">./verzeichnis-mit-dem-eben-heruntergeladenen-github-repository/</span>
 git pull
