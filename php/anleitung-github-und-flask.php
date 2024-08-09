@@ -84,24 +84,12 @@
 <section class="section">
 <div class="sectionContent">
 <pre class="codeContent">
-<code>
-WSGIDaemonProcess flaskapp threads=5
+<code class="python">WSGIDaemonProcess flaskapp threads=5
 WSGIScriptAlias / /verzeichnis-der-python/flask-instanz/ flaskapp.wsgi
 
 <Directory /var/customers/webs/codevoyage/python>
     Require all granted</p>
-</Directory>
-</code>
-</pre>
-
-<pre><code class="python">def beispiel_funktion():
-    print("Hallo Welt")
-    for i in range(5):
-        print(i)</code></pre>
-
-    <!-- Highlight.js JavaScript -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
+</Directory></code></pre>
 
 <?php
     require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/footer.inc.php");
