@@ -139,7 +139,9 @@ a, a:hover {
 .content {
     border-top: 1px solid #D8DAE1;
     border-bottom: 1px solid #D8DAE1;
-
+        @media (max-width: 768px) {
+            border-bottom: 0;
+        }
 }
 
 .navigation:not(.seitentitel) {
