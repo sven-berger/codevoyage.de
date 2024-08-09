@@ -7,7 +7,7 @@
 <h3 class="boxTitle">Flask und alle nötigen Pakete herunterladen und starten</h3>
 <pre><code class="language-bash">sudo apt install python3 python3-pip python3-venv libapache2-mod-wsgi-py3</code></pre>
 <p class="notice">Dies gilt für Ubuntu. Die Wahrscheinlichkeit, dass Debian mehr Pakete benötigt, ist gegeben</p>
-<pre><code class="language-bash">cd <span style="font-weight: bold; color:darkred;">/verzeichnis-in-dem-python/flask-ausgeführt werden soll/</span>
+<pre><code class="language-bash">cd <span style="font-weight: bold; color:darkred;">/verzeichnis-in-dem-python-flask-ausgeführt werden soll/</span>
 python3 -m venv venv
 source venv/bin/activate
 pip install Flask

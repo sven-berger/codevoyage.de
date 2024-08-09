@@ -13,6 +13,7 @@ git push</code></pre>
 
 <h3 class="boxTitle">MIT SERVER VERBINDEN UND VON GITHUB HERUNTERLADEN</h3>
 <pre><code class="language-bash">ssh user@hostname.tld / IP
+
 cd <span style="font-weight: bold; color:darkred;">/verzeichnis-in-das-das-github-repository-kommen-soll/</span>
 
 git clone https://github.com/username/repository.de.git</code></pre>
