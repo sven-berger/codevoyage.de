@@ -34,6 +34,7 @@ def hello():
 if __name__ == '__main__':
     app.run(debug=True)</code></pre>
 
+<h3 class="boxTitle">Apache-Konfiguration <span style="font-weight: bold;">anpassen</span></h3>
 <pre><code class="apache">WSGIDaemonProcess flaskapp python-path=/verzeichnis-mit-dem-flask-verzeichnis/:/verzeichnis-mit-dem-flask-verzeichnis/venv/lib/python3.XX/site-packages
 WSGIProcessGroup flaskapp
 WSGIScriptAlias / /verzeichnis-in-dem-flask-ausgeführt werden soll/flaskapp.wsgi</code></pre>
