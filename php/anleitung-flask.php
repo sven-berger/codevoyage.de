@@ -35,9 +35,13 @@ if __name__ == '__main__':
     app.run(debug=True)</code></pre>
 
 <h3 class="boxTitle">Apache-Konfiguration <span style="font-weight: bold;">anpassen</span></h3>
-<pre><code class="apache">WSGIDaemonProcess flaskapp
-WSGIScriptAlias / /verzeichnis-der-python-flask-instanz/flaskapp.wsgi</code></pre>
+<pre><code class="apache">WSGIDaemonProcess flaskapp python-path=<span style="font-weight: bold; color:darkred;">/verzeichnis-mit-dem-flask-verzeichnis/</span>:<span style="font-weight: bold; color:darkred;">/verzeichnis-mit-dem-flask-verzeichnis/</span>/venv/lib/python3.<span style="font-weight: bold; color:darkred;">XX</span>/site-packages
+WSGIProcessGroup flaskapp
+WSGIScriptAlias / <span style="font-weight: bold; color:darkred;">/verzeichnis-mit-dem-flask-verzeichnis/</span>/flaskapp.wsgi</code></pre>
 
 <?php
     require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/footer.inc.php");
 ?>
+
+
+
