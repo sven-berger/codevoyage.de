@@ -17,7 +17,7 @@ deactivate</code></pre>
 
 <h3 class="boxTitle">FlaskApp konfigurieren</h3>
 <p style="font-weight: bold; color:darkred;">nano flaskapp.wsgi</p>
-<pre><code class="apache">import sys
+<pre><code class="language-python">import sys
 import logging
 
 sys.path.insert(0, '<span style="font-weight: bold; color:darkred;">/verzeichnis-in-dem-python/flask-ausgeführt werden soll/</span>')
@@ -26,7 +26,7 @@ logging.basicConfig(stream=sys.stderr)</code></pre>
 
 <h3 class="boxTitle">App anlegen</h3>
 <p style="font-weight: bold; color:darkred;">nano app.py</p>
-<pre><code class="apache">from flask import Flask
+<pre><code class="language-python">from flask import Flask
 app = Flask(__name__)
 
 @app.route('/')
