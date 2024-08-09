@@ -100,14 +100,6 @@ a, a:hover {
             font-family: FontAwesome;
             color: #3579BD;
         }
-
-        li {
-            margin: 10px 0 !important;
-
-            &::before {
-                content: '⮚ ';
-            }
-        }
     }
 
     .subTitle {
