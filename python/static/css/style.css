@@ -344,6 +344,6 @@ form button {
         content: '(';
     } 
     &::after {
-        content: ')';
+        content: '.)';
     }
 }
