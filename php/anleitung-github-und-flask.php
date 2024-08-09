@@ -64,8 +64,8 @@ logging.basicConfig(stream=sys.stderr)</code></pre>
 </div>
 </section>
 <h3 class="boxTitle">App anlegen</h3>
-<p style="font-weight: bold; color:darkred;">nano app.py</p>
 <section class="section">
+<p style="font-weight: bold; color:darkred;">nano app.py</p>
 <div class="sectionContent">
 <pre><code class="apache">
 from flask import Flask
