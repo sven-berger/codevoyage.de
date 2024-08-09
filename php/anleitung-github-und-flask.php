@@ -79,8 +79,8 @@ if __name__ == '__main__':
     app.run(debug=True)</code></pre>
 </div>
 </section>
-<section class="section">
 <h3 class="boxTitle">Apache-Konfiguration <span style="font-weight: bold;">anpassen</span></h3>
+<section class="section">
 <div class="sectionContent">
 <pre><code class="apache">WSGIDaemonProcess flaskapp threads=5
 WSGIScriptAlias / /verzeichnis-der-python/flask-instanz/flaskapp.wsgi
