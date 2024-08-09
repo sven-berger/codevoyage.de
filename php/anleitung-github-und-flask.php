@@ -83,6 +83,7 @@
 <h3 class="boxTitle">Apache-Konfiguration <span style="font-weight: bold;">anpassen</span></h3>
 <section class="section">
 <div class="sectionContent">
+<div class="codeContent">
 <p>WSGIDaemonProcess flaskapp threads=5</p>
 <p>WSGIScriptAlias / <span style="font-weight: bold; color:darkred;">/verzeichnis-der-python/flask-instanz/</span>flaskapp.wsgi</p>
 <p><br/></p>
