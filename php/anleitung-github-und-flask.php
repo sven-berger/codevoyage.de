@@ -20,22 +20,17 @@
 </section>
 
 <h3 class="boxTitle">MIT SERVER VERBINDEN UND VON GITHUB HERUNTERLADEN</h3>
-<section class="section">
-<div class="sectionContent">
-<pre><code class="language-bash">
-git clone https://github.com/username/repository.de.git <br/><span class="notice">Bei Bedarf - Das sollte aber in der Regel nur einmal nötig sein</span>
-cd <span style="font-weight: bold; color:darkred;">./verzeichnis-mit-dem-eben-heruntergeladenen-github-repository/</span>
+<pre><code class="language-bash">git clone https://github.com/username/repository.de.git</code></p>
+<p class="notice">Bei Bedarf - Das sollte aber in der Regel nur einmal nötig sein</p>
+<pre><code class="language-bash">cd <span style="font-weight: bold; color:darkred;">./verzeichnis-mit-dem-eben-heruntergeladenen-github-repository/</span>
 git pull
 </code></pre>
-</div>
-</section>
 
 <h3 class="boxTitle">Flask herunterladen und starten</h3>
 <section class="section">
 <div class="sectionContent">
-<p>sudo apt install python3 python3-pip python3-venv libapache2-mod-wsgi-py3</p>
+<pre><code class="language-bash">sudo apt install python3 python3-pip python3-venv libapache2-mod-wsgi-py3</code></pre>
 <p class="notice">Dies gilt für Ubuntu. Die Wahrscheinlichkeit, dass Debian mehr Pakete benötigt, ist gegeben</p>
-<p><br/></p>
 <pre><code class="language-bash">
 cd <span style="font-weight: bold; color:darkred;">/verzeichnis-in-dem-python/flask-ausgeführt werden soll/</span>
 python3 -m venv venv
