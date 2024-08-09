@@ -93,6 +93,16 @@ WSGIScriptAlias / /verzeichnis-der-python/flask-instanz/ flaskapp.wsgi
 </Directory>
 </code>
 </pre>
+
+<pre><code class="python">def beispiel_funktion():
+    print("Hallo Welt")
+    for i in range(5):
+        print(i)</code></pre>
+
+    <!-- Highlight.js JavaScript -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
 <?php
     require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/footer.inc.php");
 ?>
