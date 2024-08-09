@@ -3,6 +3,7 @@
     $pageTitle = 'Eine Kurzanleitung für Flask';
     require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/header.inc.php");
 ?>
+
 <h3 class="boxTitle">Flask und alle nötigen Pakete herunterladen und starten</h3>
 <pre><code class="language-bash">sudo apt install python3 python3-pip python3-venv libapache2-mod-wsgi-py3</code></pre>
 <p class="notice">Dies gilt für Ubuntu. Die Wahrscheinlichkeit, dass Debian mehr Pakete benötigt, ist gegeben</p>
@@ -37,11 +38,7 @@ if __name__ == '__main__':
 
 <h3 class="boxTitle">Apache-Konfiguration <span style="font-weight: bold;">anpassen</span></h3>
 <pre><code class="apache">WSGIDaemonProcess flaskapp threads=5
-WSGIScriptAlias / /verzeichnis-der-python-flask-instanz/flaskapp.wsgi
-
-&lt;Directory /verzeichnis-der-python-flask-instanz/&gt;
-    Require all granted
-&lt;/Directory&gt;</code></pre>
+WSGIScriptAlias / /verzeichnis-der-python-flask-instanz/flaskapp.wsgi</code></pre>
 
 <?php
     require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/footer.inc.php");
