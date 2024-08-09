@@ -1,6 +1,6 @@
 <?php
     $bereich = 'PHP-Bereich';
-    $pageTitle = 'Eine Kurzanleitung für GitHub und Flask';
+    $pageTitle = 'Eine Kurzanleitung für GitHub';
     require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/header.inc.php");
 ?>
 
