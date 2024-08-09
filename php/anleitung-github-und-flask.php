@@ -1,6 +1,6 @@
 <?php
     $bereich = 'PHP-Bereich';
-    $pageTitle = 'Manuelles Hoch/Runterladen bei GitHub - Anleitung Flask';
+    $pageTitle = 'Eine Kurzanleitung für GitHub und Flask';
     require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/header.inc.php");
 ?>
 <p><p>ssh user@hostname.tld / IP</p>
