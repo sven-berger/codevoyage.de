@@ -35,7 +35,7 @@ if __name__ == '__main__':
     app.run(debug=True)</code></pre>
 
 <h3 class="boxTitle">Apache-Konfiguration <span style="font-weight: bold;">anpassen</span></h3>
-<pre><code class="apache">WSGIDaemonProcess flaskapp python-path=<span style="font-weight: bold; color:darkred;">/verzeichnis-mit-dem-flask-verzeichnis/</span>:<span style="font-weight: bold; color:darkred;">/verzeichnis-mit-dem-flask-verzeichnis/</span>/venv/lib/python3.<span style="font-weight: bold; color:darkred;">XX</span>/site-packages
+<pre><code class="apache">WSGIDaemonProcess flaskapp python-path=<span style="font-weight: bold; color:darkred;">/verzeichnis-mit-dem-flask-verzeichnis/</span>:/verzeichnis-mit-dem-flask-verzeichnis/venv/lib/python3.XX/site-packages
 WSGIProcessGroup flaskapp
 WSGIScriptAlias / <span style="font-weight: bold; color:darkred;">/verzeichnis-mit-dem-flask-verzeichnis/</span>/flaskapp.wsgi</code></pre>
 
