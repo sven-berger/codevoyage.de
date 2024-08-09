@@ -27,3 +27,5 @@
         <h2><?php echo $pageTitle; ?></h2>
         <section class="section">
             <div class="sectionContent">
+            <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+            <script>hljs.highlightAll();</script>
