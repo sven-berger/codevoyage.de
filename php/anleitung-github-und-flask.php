@@ -23,7 +23,7 @@
 <section class="section">
 <div class="sectionContent">
 
-<p>git clone https://github.com/username/repository.de.git <br/><span class="notice">(Bei Bedarf - Das sollte aber in der Regel nur einmal nötig sein)</span></p>
+<p>git clone https://github.com/username/repository.de.git <br/><span class="notice">Bei Bedarf - Das sollte aber in der Regel nur einmal nötig sein</span></p>
 <p><br/></p>
 <p>cd <span style="font-weight: bold; color:darkred;">./verzeichnis-mit-dem-eben-heruntergeladenen-github-repository/</span></p>
 <p><br/></p>
