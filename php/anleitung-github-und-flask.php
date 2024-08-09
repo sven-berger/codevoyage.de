@@ -23,7 +23,7 @@
 <section class="section">
 <div class="sectionContent">
 
-<p>git clone https://github.com/username/repository.de.git <br/><strong><small>(Bei Bedarf - Das sollte aber in der Regel nur einmal nötig sein)</small></strong></p>
+<p>git clone https://github.com/username/repository.de.git <br/><span class="notice">(Bei Bedarf - Das sollte aber in der Regel nur einmal nötig sein)</span></p>
 <p><br/></p>
 <p>cd <span style="font-weight: bold; color:darkred;">./verzeichnis-mit-dem-eben-heruntergeladenen-github-repository/</span></p>
 <p><br/></p>
@@ -35,7 +35,7 @@
 <section class="section">
 <div class="sectionContent">
 <p>sudo apt install python3 python3-pip python3-venv libapache2-mod-wsgi-py3</p>
-<p class="notice">Dies gilt für Ubuntu. Die Warhrscheinlichkeit, dass Debian mehr Pakete benötigt, ist gegeben.</p>
+<p class="notice">Dies gilt für Ubuntu. Die Wahrscheinlichkeit, dass Debian mehr Pakete benötigt, ist gegeben.</p>
 <p><br/></p>
 <p>cd <span style="font-weight: bold; color:darkred;">/verzeichnis-in-dem-flask-ausgeführt werden soll/</span></p>
 <p><br/></p>
