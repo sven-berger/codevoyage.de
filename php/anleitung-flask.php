@@ -42,6 +42,3 @@ WSGIScriptAlias / /verzeichnis-in-dem-flask-ausgeführt werden soll/flaskapp.wsg
 <?php
     require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/footer.inc.php");
 ?>
-
-
-
