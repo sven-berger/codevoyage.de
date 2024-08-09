@@ -52,19 +52,19 @@
 </section>
 <h3 class="boxTitle">FlaskApp konfigurieren</h3>
 <section class="section">
-<p>nano flaskapp.wsgi</p>
+<p style="font-weight: bold; color:darkred;">nano flaskapp.wsgi</p>
 <div class="sectionContent">
 <pre><code class="apache">
 import sys
 import logging
 
-sys.path.insert(0, '<span style="font-weight: bold; color:darkred;">/verzeichnis-in-dem-python/flask-ausgeführt werden soll/')
+sys.path.insert(0, '<span style="font-weight: bold; color:darkred;">/verzeichnis-in-dem-python/flask-ausgeführt werden soll/')</span>
 from app import app as application
 logging.basicConfig(stream=sys.stderr)</code></pre>
 </div>
 </section>
 <h3 class="boxTitle">App anlegen</h3>
-<p>nano app.py</p>
+<p style="font-weight: bold; color:darkred;">nano app.py</p>
 <section class="section">
 <div class="sectionContent">
 <pre><code class="apache">
