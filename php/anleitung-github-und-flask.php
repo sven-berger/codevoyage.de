@@ -64,8 +64,8 @@ logging.basicConfig(stream=sys.stderr)</code></pre>
 </div>
 </section>
 <h3 class="boxTitle">App anlegen</h3>
-<section class="section">
 <p>nano app.py</p>
+<section class="section">
 <div class="sectionContent">
 <pre><code class="apache">
 from flask import Flask
@@ -80,6 +80,7 @@ if __name__ == '__main__':
 </div>
 </section>
 <section class="section">
+<h3 class="boxTitle">Apache-Konfiguration <span style="font-weight: bold;">anpassen</span></h3>
 <div class="sectionContent">
 <pre><code class="apache">WSGIDaemonProcess flaskapp threads=5
 WSGIScriptAlias / /verzeichnis-der-python/flask-instanz/flaskapp.wsgi
