@@ -54,41 +54,38 @@
 <section class="section">
 <div class="sectionContent">
 <p>nano flaskapp.wsgi</p>
-<div class="codeContent">
-<p>import sys</p>
-<p>import logging</p>
-<p><br/></p>
-<p>sys.path.insert(0, '<span style="font-weight: bold; color:darkred;">/verzeichnis-in-dem-python/flask-ausgeführt werden soll/</span>')</p>
-<p>from app import app as application</p>
-<p>logging.basicConfig(stream=sys.stderr)</p>
+<pre><code class="apache">
+import sys
+import logging
+
+sys.path.insert(0, '<span style="font-weight: bold; color:darkred;">/verzeichnis-in-dem-python/flask-ausgeführt werden soll/')
+from app import app as application
+logging.basicConfig(stream=sys.stderr)</code></pre>
 </div>
 </section>
 <h3 class="boxTitle">App anlegen</h3>
 <section class="section">
 <div class="sectionContent">
 <p>nano app.py</p>
-<div class="codeContent">
-<p>from flask import Flask</p>
-<p><br/></p>
-<p>app = Flask(__name__)</p>
-<p><br/></p>
-<p>@app.route('/')</p>
-<p>def hello():</p>
-<p>    return "Hello, World!"</p>
-<p><br/></p>
-<p>if __name__ == '__main__':</p>
-<p>    app.run(debug=True)</p>
+<pre><code class="apache">
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def hello():
+    return "Hello, World!"
+
+if __name__ == '__main__':
+    app.run(debug=True)</code></pre>
 </div>
 </section>
-<h3 class="boxTitle">Apache-Konfiguration <span style="font-weight: bold;">anpassen</span></h3>
 <section class="section">
 <div class="sectionContent">
-<pre class="codeContent">
-<code class="python">WSGIDaemonProcess flaskapp threads=5
-WSGIScriptAlias / /verzeichnis-der-python/flask-instanz/ flaskapp.wsgi
+<pre><code class="apache">WSGIDaemonProcess flaskapp threads=5
+WSGIScriptAlias / /verzeichnis-der-python/flask-instanz/flaskapp.wsgi
 
 <Directory /var/customers/webs/codevoyage/python>
-    Require all granted</p>
+    Require all granted
 </Directory></code></pre>
 
 <?php
