@@ -350,12 +350,14 @@ form button {
 }
 
 pre {
+    background: #fafafa !important;
     background-color: #f4f4f4;
     border: 1px solid #D8DAE1;
     border-radius: 12px;
     padding: 20px;
     overflow-x: auto;
 }
+
 code {
     font-family: "Courier New", Courier, monospace;
     font-size: 1em;
