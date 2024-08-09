@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://codevoyage.de/python/static/css/style.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
     <title><?php echo $pageTitle; ?></title>
 </head>
 
@@ -28,5 +30,3 @@
         <h2><?php echo $pageTitle; ?></h2>
         <section class="section">
             <div class="sectionContent">
-            <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
-            <script>hljs.highlightAll();</script>
