@@ -92,13 +92,16 @@ a, a:hover {
     
     ul {
         list-style: none !important; 
-        padding: 0 10px;
+        padding: 0 0 0 30px !important;
 
         ::marker {
-            margin-right: 10px !important;
             content: '\f0a9' ' ' !important;
             font-family: FontAwesome;
             color: #3579BD;
+        }
+
+        li {
+            margin: 5px 0;
         }
     }
 
