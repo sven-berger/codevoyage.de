@@ -52,8 +52,8 @@
 </section>
 <h3 class="boxTitle">FlaskApp konfigurieren</h3>
 <section class="section">
-<div class="sectionContent">
 <p>nano flaskapp.wsgi</p>
+<div class="sectionContent">
 <pre><code class="apache">
 import sys
 import logging
@@ -65,8 +65,8 @@ logging.basicConfig(stream=sys.stderr)</code></pre>
 </section>
 <h3 class="boxTitle">App anlegen</h3>
 <section class="section">
-<div class="sectionContent">
 <p>nano app.py</p>
+<div class="sectionContent">
 <pre><code class="apache">
 from flask import Flask
 app = Flask(__name__)
@@ -84,9 +84,9 @@ if __name__ == '__main__':
 <pre><code class="apache">WSGIDaemonProcess flaskapp threads=5
 WSGIScriptAlias / /verzeichnis-der-python/flask-instanz/flaskapp.wsgi
 
-<Directory /var/customers/webs/codevoyage/python>
+&lt;Directory /var/customers/webs/codevoyage/python&gt;
     Require all granted
-</Directory></code></pre>
+&lt;/Directory&gt;</code></pre>
 
 <?php
     require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/footer.inc.php");
