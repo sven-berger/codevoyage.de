@@ -18,11 +18,9 @@ deactivate</code></pre>
 <h3 class="boxTitle">FlaskApp konfigurieren</h3>
 <p style="font-weight: bold; color:darkred;">nano flaskapp.wsgi</p>
 <pre><code class="language-python">import sys
-import logging
 
 sys.path.insert(0, '<span style="font-weight: bold; color:darkred;">/verzeichnis-in-dem-python-flask-ausgeführt werden soll/</span>')
-from app import app as application
-logging.basicConfig(stream=sys.stderr)</code></pre>
+from app import app as application</code></pre>
 
 <h3 class="boxTitle">App anlegen</h3>
 <p style="font-weight: bold; color:darkred;">nano app.py</p>
@@ -37,7 +35,7 @@ if __name__ == '__main__':
     app.run(debug=True)</code></pre>
 
 <h3 class="boxTitle">Apache-Konfiguration <span style="font-weight: bold;">anpassen</span></h3>
-<pre><code class="apache">WSGIDaemonProcess flaskapp threads=5
+<pre><code class="apache">WSGIDaemonProcess flaskapp
 WSGIScriptAlias / /verzeichnis-der-python-flask-instanz/flaskapp.wsgi</code></pre>
 
 <?php
