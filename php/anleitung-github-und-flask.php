@@ -83,14 +83,16 @@
 <h3 class="boxTitle">Apache-Konfiguration <span style="font-weight: bold;">anpassen</span></h3>
 <section class="section">
 <div class="sectionContent">
-<div class="codeContent">
-<p>WSGIDaemonProcess flaskapp threads=5</p>
-<p>WSGIScriptAlias / <span style="font-weight: bold; color:darkred;">/verzeichnis-der-python/flask-instanz/</span>flaskapp.wsgi</p>
-<p><br/></p>
-<p><Directory /var/customers/webs/codevoyage/python></p>
-<p>        Require all granted</p>
-<p></Directory></p>
-</div>
+<pre class="codeContent">
+<code>
+WSGIDaemonProcess flaskapp threads=5
+WSGIScriptAlias / /verzeichnis-der-python/flask-instanz/ flaskapp.wsgi
+
+<Directory /var/customers/webs/codevoyage/python>
+    Require all granted</p>
+</Directory>
+</code>
+</pre>
 <?php
     require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/footer.inc.php");
 ?>

@@ -347,3 +347,14 @@ form button {
         content: '.)';
     }
 }
+
+pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+code {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1em;
+}
