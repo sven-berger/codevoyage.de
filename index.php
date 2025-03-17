@@ -1,13 +1,21 @@
 <?php require_once("includes/header.php"); ?>
+
 <?php
-    $page = isset($_GET['page']) ? $_GET['page'] : 'index';
-    if (file_exists("lib/" . $page . ".lib.php")) {
-        include("lib/" . $page . ".lib.php");
-    } elseif (isset($_GET['page']) && file_exists("lib/" . $_GET['page'] . ".lib.php")) {
-        include("lib/" . $_GET['page'] . ".lib.php");
-    } else {
-        include("lib/errors/404.php");
-    }
+// Standardseite setzen
+$page = isset($_GET['page']) ? $_GET['page'] : 'index';
+
+// Sicherheitscheck: Keine ".." oder "/" im Dateinamen erlauben
+$page = basename($page);
+
+// Pfad zur Datei
+$filePath = "lib/" . $page . ".lib.php";
+
+// Datei einbinden, wenn sie existiert
+if (file_exists($filePath)) {
+    include $filePath;
+} else {
+    include "lib/errors/404.php";
+}
 ?>
 
 <?php require_once("includes/footer.php"); ?>
