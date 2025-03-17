@@ -5,7 +5,7 @@ $sql = "SELECT * FROM pages WHERE url = '$page'";
 $result = $connection->query($sql);
 $row = $result->fetchAll();
 foreach ($row as $row) {
-    $row = $row;
+    // Process each row if needed
 }
 ?>
 
