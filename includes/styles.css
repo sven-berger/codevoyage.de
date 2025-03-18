@@ -305,7 +305,7 @@ input {
     color: #d98600;
     border-bottom: 1px solid #D8DAE1;
     padding-bottom: 10px;
-    font-size: 1.5em;
+    font-size: 15px;
 }
 
 .section-title {
@@ -401,4 +401,12 @@ ul, ol {
 
 li {
     margin-bottom: 5px;
+}
+
+.success {
+    color: green !important;
+}
+
+fail {
+    color: darkred !important;
 }

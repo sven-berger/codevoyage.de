@@ -1,7 +1,7 @@
 <div class="sidebar">
-    <h3></h3>
+    <h3>Eigene Werke</h3>
     <ul>
-        <li></li>
+        <li><a href="index.php?page=zahlen-raten">Zahlen raten</li>
     </ul>
     <h3></h3>
     <ul class="sidebar-end">  

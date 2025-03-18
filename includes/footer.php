@@ -13,7 +13,7 @@ foreach ($row as $row) {
 <?php if (isset($_GET['page'])): ?>
 <div class="page-function">
     <ul>
-        <li><button><a href="../acp/page-edit.php?page=<?php echo $row['url']; ?>">Seite bearbeiten</a></button></li>
+        <li><button><a href="../acp/index.php?page=page-edit&url=<?php echo $row['url']; ?>">Seite bearbeiten</a></button</li>
     </ul>
 </div>
 <?php endif; ?>
