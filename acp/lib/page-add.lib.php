@@ -8,8 +8,8 @@
     <label for="Seiteninhalt">Seiteninhalt</label>
     <textarea name="content"></textarea>
     
-    <input type="submit" name="submit" value="Seite hinzufügen">
-    <input type="reset" name="reset" value="Zurücksetzen">
+    <button type="submit" name="submit">Seite hinzufügen</button>
+    <button type="reset" name="reset">Zurücksetzen</button>
 </form>
 
 <?php if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['pagename']) && isset($_POST['url']) && isset($_POST['content'])) {

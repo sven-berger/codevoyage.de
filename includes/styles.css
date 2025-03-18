@@ -25,26 +25,6 @@ body {
     margin: 10px 0 !important;
 }
 
-/* Editor */
-.tox-tinymce {
-    margin: 10px 0;
-}
-
-/** Aktueller Pfad **/
-.tox .tox-statusbar__path {
-    display: none !important;
-}
-
-/** Copyright **/
-.tox-statusbar__branding {
-    display: none !important;
-}
-
-/** Größe anpassen **/
-.tox-statusbar__resize-handle {
-    display: none !important;
-}
-
 /* Inhalt */
 .content {
     margin-top: 20px;
@@ -61,7 +41,7 @@ h1 {
 }
 
 p, a, a:hover {
-    font-size: 13px !important;
+    font-size: 14px !important;
     color: #666;
     padding: 0 !important;
     text-decoration: none;
@@ -113,7 +93,7 @@ button[type="button"]:hover {
 
 /* Container */       
 .container {  
-    display: flex;  
+    display: flex;
     width: 100%;  
     max-width: 2000px;  
     min-height: 60vh;  
@@ -168,14 +148,30 @@ button[type="button"]:hover {
 .sidebar ul li a:hover {  
     color: #3498db;  
 } 
-        
+
+/* Blockzitat */
+blockquote {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fcfcfc;
+    padding: 20px;
+    margin: 0;
+    font-style: italic;
+    font-weight: bolder !important;
+}
+
+blockquote p:before {
+    content: '➥';
+    margin-right: 5px;
+}
+       
 /* Hauptinhalt */
 .main-content {
     flex: 1;
+    display: flex;
     padding: 20px;
     box-sizing: border-box;
     overflow-y: auto;
-    display: flex;
     flex-direction: column;
 }
 
@@ -227,6 +223,7 @@ table {
     border-radius: 5px;
     overflow: hidden;
     background: #f7f1e3 !important;
+    margin-top: 20px;
 }
 
 table th, table td {
@@ -290,6 +287,19 @@ input {
     margin: 20px 0;
 }
 
+.section h1 {
+    margin-top: 0;
+    margin-right: 20px;
+    padding-bottom: 1px;
+    font-size: 20px;
+    border-bottom: 1px solid #d98600;
+    display: flex;
+}
+
+.section h3 {
+    font-size: 16px;
+}
+
 .sectionHeader {
     margin: 20px 0;
     color: #d98600;
@@ -320,6 +330,12 @@ input {
     flex: 1;
     border-bottom: 1px solid #D8DAE1;
     margin: 0 10px;
+}
+
+.section img {
+    margin: 0 20px 10px 0;
+    border-radius: 8px;
+    border: 2px solid #ddd;
 }
 
 /* Bootstrap Grid */
@@ -355,4 +371,34 @@ input {
 .col-md-6 {
     flex: 0 0 50% !important;
     max-width: 50% !important;
+}
+
+/* Details */
+details {
+    border-top: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f7f1e3;
+}
+
+details p {
+    padding: 12px !important;
+}
+
+summary {
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    background-color: #2980b9 !important;
+    padding: 10px;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 8px 8px 0 0;
+}
+
+ul, ol {
+    padding: 0 0 0 20px;
+}
+
+li {
+    margin-bottom: 5px;
 }

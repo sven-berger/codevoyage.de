@@ -1,8 +1,8 @@
-<!--- Diese Seite dient zur Bearbeitung von Seiten --->
 <?php require_once("../includes/acp-header.php"); ?>
 
 <?php if (isset($_GET['page'])): ?>
     <?php
+        ob_start(); // Ausgabe puffern
         $page = $_GET['page'];
         
         // SQL-Abfrage
@@ -36,10 +36,15 @@
     
             $sql = "UPDATE pages SET pagename = '$pagename', url = '$url', content = '$content' WHERE url = '$page'";
             $connection->query($sql);
-    
-            header("Location: ../index.php?page=" . $page);
+
+            if ($connection->query($sql)) { 
+                header("Location: ../index.php?page=" . $page);
+                exit;
+            } else {
+                echo "Fehler beim Speichern: " . $connection->errorInfo()[2];
+            }
         ?>
     <?php endif; ?>
 <?php endif; ?>
-
+<?php ob_end_flush(); ?>
 <?php require_once("../includes/acp-footer.php"); ?>

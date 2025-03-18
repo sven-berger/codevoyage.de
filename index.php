@@ -1,5 +1,5 @@
 <?php require_once("includes/header.php"); ?>
-
+<div class="section">
 <?php
 // Standardseite setzen
 $page = isset($_GET['page']) ? $_GET['page'] : 'index';
@@ -17,5 +17,5 @@ if (file_exists($filePath)) {
     include "lib/errors/404.php";
 }
 ?>
-
+</div>
 <?php require_once("includes/footer.php"); ?>
