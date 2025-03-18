@@ -1,9 +1,6 @@
-<?php
-    $bereich = 'PHP-Bereich';
-    $paPOSTitle = "Zahlen raten";
-    require_once("includes/header.php");
-?>
+<?php $pagename = 'kontakt'; ?>
 
+<body id="<?php echo $pagename; ?>">
 <?php if (!isset($_POST['zahl'])): ?>
     <?php echo $section_beginn; ?>
     <form action="" method="post">
@@ -54,8 +51,5 @@
         <button><a href="index.php?page=zahlen-raten">Neues Spiel starten</a></button>
         <?php echo $section_ende; ?>
     <?php endif; ?>
-<?php endif; ?>
-
-<?php
-    require_once("includes/footer.php");
-?>
+<?php endif; ?> 
+</body>

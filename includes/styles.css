@@ -407,6 +407,11 @@ li {
     color: green !important;
 }
 
-fail {
+.fail {
     color: darkred !important;
+}
+
+body#kontakt .angelegte-seiten,
+body#zahlen-raten .angelegte-seiten {
+    display: none;
 }

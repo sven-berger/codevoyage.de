@@ -9,7 +9,7 @@ foreach ($row as $row) {
 }
 ?>
 
-<!-- Sicherstellen, dass der Button nur angezeigt wird, wenn ein Parameter übergeben wurde-->
+<div class="angelegte-seiten">
 <?php if (isset($_GET['page'])): ?>
 <div class="page-function">
     <ul>
@@ -17,6 +17,7 @@ foreach ($row as $row) {
     </ul>
 </div>
 <?php endif; ?>
+</div>
 
 </div> <!-- Schließendes div für main-content -->
 </div> <!-- Schließendes div für container -->
