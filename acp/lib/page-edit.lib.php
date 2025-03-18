@@ -1,33 +1,56 @@
-<!--- Diese Seite dient zur Bearbeitung von Seiten --->
-<?php
+<?php if (isset($_GET['url'])): ?>
+    <?php
+        ob_start(); // Ausgabe puffern
+        $url = $_GET['url'];
+        
+        // SQL-Abfrage
+        $sql = "SELECT * FROM pages WHERE url = :url";
+        $stmt = $connection->prepare($sql);
+        $stmt->bindParam(':url', $url, PDO::PARAM_STR);
+        $stmt->execute();
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
-$page = $_GET['page'];
-$sql = "SELECT * FROM pages WHERE url = '$page'";
-$result = $connection->query($sql);
-$row = $result->fetchAll();
+        if (!$row) {
+            echo "Seite nicht gefunden.";
+            exit;
+        }
+    ?>
 
-if (isset($_POST['submit'])) {
-    $pagename = $_POST['pagename'];
-    $url = $_POST['url'];
-    $content = $_POST['content'];
+    <form method="POST" action="">
+        <label for="Seitenname">Seitenname</label>
+        <input type="text" name="pagename" id="pagename" value="<?php echo htmlspecialchars($row['pagename']); ?>" required>
+
+        <label for="url">URL</label>
+        <input type="text" name="url" id="url" value="<?php echo htmlspecialchars($row['url']); ?>" required>
+
+        <label for="Seiteninhalt">Seiteninhalt</label>
+        <textarea name="content" id="content" required><?php echo htmlspecialchars($row['content']); ?></textarea>
     
-    $sql = "UPDATE pages SET pagename = '$pagename', url = '$url', content = '$content' WHERE url = '$page'";
-    $connection->query($sql);
+        <button type="submit" name="submit">Seite bearbeiten</button>
+        <button type="reset" name="reset">Zurücksetzen</button>
+    </form>
+
+    <?php if (isset($_POST['submit'])): ?>
+        <?php
+            $pagename = $_POST['pagename'];
+            $new_url = $_POST['url'];
+            $content = $_POST['content'];
     
-    header("Location: index.php?page=pages");
-}
-?>
+            $sql = "UPDATE pages SET pagename = :pagename, url = :new_url, content = :content WHERE url = :url";
+            $stmt = $connection->prepare($sql);
+            $stmt->bindParam(':pagename', $pagename, PDO::PARAM_STR);
+            $stmt->bindParam(':new_url', $new_url, PDO::PARAM_STR);
+            $stmt->bindParam(':content', $content, PDO::PARAM_STR);
+            $stmt->bindParam(':url', $url, PDO::PARAM_STR);
 
-<form method="POST" action="">
-    <label for="Seitenname">Seitenname</label>
-    <input type="text" name="pagename" id="pagename" value="<?php echo $row[0]['pagename']; ?>" required>
-
-    <label for="url">URL</label>
-    <input type="text" name="url" id="url" value="<?php echo $row[0]['url']; ?>" required>
-
-    <label for="Seiteninhalt">Seiteninhalt</label>
-    <textarea name="content" id="content" required><?php echo $row[0]['content']; ?></textarea>
-
-    <input type="submit" name="submit" value="Seite bearbeiten">
-    <input type="reset" name="reset" value="Zurücksetzen">
-</form>
+            if ($stmt->execute()) {
+                // Removed the unnecessary line as it is redundant
+                header("Location: ../index.php?page=" . urlencode($row['url']));
+                exit();
+            } else {
+                echo "Fehler beim Speichern.";
+            }
+        ?>
+    <?php endif; ?>
+<?php endif; ?>
+<?php ob_end_flush(); ?>
