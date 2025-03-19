@@ -1,6 +1,3 @@
-<?php $pagename = 'kontakt'; ?>
-
-<body id="<?php echo $pagename; ?>">
 <?php if (!isset($_POST['zahl'])): ?>
     <?php echo $section_beginn; ?>
     <form action="" method="post">
@@ -52,4 +49,3 @@
         <?php echo $section_ende; ?>
     <?php endif; ?>
 <?php endif; ?> 
-</body>

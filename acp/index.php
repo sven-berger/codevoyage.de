@@ -9,4 +9,4 @@
         include("../lib/errors/404.php");
     }
 ?>
-<?php require_once("../includes/acp-footer.php"); ?>
+<?php require_once("../includes/footer.php"); ?>
