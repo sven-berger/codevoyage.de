@@ -1,25 +1,33 @@
-<!-- Direktlink zu der Bearbeitung der Seite hinzufügen-->
 <?php
-$page = $_GET['page'];
-$sql = "SELECT * FROM pages WHERE url = '$page'";
-$result = $connection->query($sql);
-$row = $result->fetchAll();
-foreach ($row as $row) {
-    // Process each row if needed
+if (isset($_GET['page'])) {
+    $page = $_GET['page'];
+
+    // Sichere SQL-Abfrage mit Prepared Statement
+    $stmt = $connection->prepare("SELECT * FROM pages WHERE url = :page");
+    $stmt->bindParam(':page', $page, PDO::PARAM_STR);
+    $stmt->execute();
+
+    // Eine einzelne Zeile abrufen
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
 }
 ?>
 
-<div class="angelegte-seiten">
-<?php if (isset($_GET['page'])): ?>
-<div class="page-function">
-    <ul>
-        <li><button><a href="../acp/index.php?page=page-edit&url=<?php echo $row['url']; ?>">Seite bearbeiten</a></button</li>
-    </ul>
-</div>
+<!-- Überprüfung, ob die Seite in der Datenbank existiert -->
+<?php if (!empty($row)): ?>
+    <div class="page-function">
+        <ul>
+            <li>
+                <button>
+                    <a href="../acp/index.php?page=page-edit&url=<?php echo htmlspecialchars($row['url']); ?>">
+                        Seite bearbeiten
+                    </a>
+                </button>
+            </li>
+        </ul>
+    </div>
 <?php endif; ?>
-</div>
 
-</div> <!-- Schließendes div für main-content -->
-</div> <!-- Schließendes div für container -->
+</div>
+</div>
 </body>
 </html>
