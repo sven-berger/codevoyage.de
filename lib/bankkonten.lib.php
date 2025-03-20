@@ -14,7 +14,6 @@
     <button type="reset">Zurücksetzen</button>
 </form>
 
-
 <?php
 class Konto {
     private $inhaber;

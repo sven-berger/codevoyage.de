@@ -2,6 +2,7 @@
     <h3>Eigene Werke</h3>
     <ul>
         <li><a href="index.php?page=zahlen-raten">Zahlen raten</li>
+        <li><a href="index.php?page=bankkonten">Bankkonten (objektorientiert programmiert)</li>
     </ul>
     <h3></h3>
     <ul class="sidebar-end">  
