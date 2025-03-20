@@ -11,6 +11,13 @@ body {
     margin-top: 60px;
 }
 
+.legend {
+    background-color: #f7f1e3;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 14px !important;
+}
+
 /* Impressum */
 .impressum {
     margin: 20px 0;
@@ -275,7 +282,7 @@ label {
     color: #333;
 }
 
-input {
+select, input {
     padding: 10px;
     border-radius: 10px;
     border: 2px solid #eee;

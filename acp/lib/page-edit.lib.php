@@ -44,7 +44,6 @@
             $stmt->bindParam(':url', $url, PDO::PARAM_STR);
 
             if ($stmt->execute()) {
-                // Removed the unnecessary line as it is redundant
                 header("Location: ../index.php?page=" . urlencode($row['url']));
                 exit();
             } else {
