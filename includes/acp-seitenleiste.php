@@ -17,7 +17,7 @@
     <div class="sidebar-end">  
         <?php if (isset($_SESSION['benutzername'])): ?>
         <ul>
-            <li><a href="index.php?page=logout">Ausloggen</a></li>
+            <li><a href="../index.php?page=logout">Ausloggen</a></li>
         </ul>
         <?php endif; ?>
     </div>
