@@ -4,6 +4,11 @@
         <li><a href="index.php?page=pages">Seitenübersicht</a></li>
         <li><a href="index.php?page=page-add">Seite hinzufügen</a></li>
     </ul>
+    <h3>Benutzerverwaltung</h3>
+    <ul>
+        <li><a href="index.php?page=user">Benutzerübersicht</a></li>
+        <li><a href="index.php?page=user-add">Benutzer hinzufügen</a></li>
+    </ul>
     <h3>Bankkonten</h3>
     <ul>
         <li><a href="index.php?page=ueberweisung-taetigen">Überweisung tätigen</a></li>
