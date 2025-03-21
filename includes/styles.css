@@ -69,7 +69,7 @@ button[type="submit"]:hover {
     background-color: #2980b9;
 }
 
-button[type="reset"] {
+.button-2, button[type="reset"] {
     padding: 10px 20px;
     border: none;
     margin-top: 10px;
@@ -84,7 +84,7 @@ button[type="reset"]:hover {
     background-color: #e67e22;
 }
 
-.button, button[type="button"] {
+button[type="button"] {
     padding: 10px 20px;
     border: none;
     background-color: #e74c3c;
@@ -96,6 +96,21 @@ button[type="reset"]:hover {
 
 button[type="button"]:hover {
     background-color: #c0392b;
+}
+
+.button-3, button[type="reset"] {
+    padding: 10px 20px;
+    border: none;
+    margin-top: 10px;
+    background-color: #c0392b;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-1, .button-2 {
+    margin-right: 5px;
 }
 
 /* Container */       
@@ -119,11 +134,7 @@ button[type="button"]:hover {
     padding: 20px;
     position: relative;
     padding-bottom: 20px 20px 50px 20px; /* Platz für .sidebar-end */  
-}
-
-.sidebar-end {
-    position: absolute;
-    bottom: 0;
+    position: relative;
 }
 
 .sidebar h2 {  
@@ -155,6 +166,55 @@ button[type="button"]:hover {
 .sidebar ul li a:hover {  
     color: #3498db;  
 } 
+
+.sidebar-end {
+    bottom: 0;
+    position: absolute;
+}
+
+.form-login {
+    display: block !important;
+}
+
+.now-box {
+    margin-left: 20px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.now-box ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.now-box li {
+    margin-right: 50px;
+}
+
+li.now-tag:before {
+    content: '\f783';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 600;
+    margin-right: 7px;
+    color: #ccc;
+}
+
+li.now-datum:before {
+    content: '\f073';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 600;
+    margin-right: 7px;
+    color: #ccc;
+}
+
+li.now-uhrzeit:before {
+    content: '\f017';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 600;
+    margin-right: 7px;
+    color: #ccc;
+}    
 
 /* Blockzitat */
 blockquote {
@@ -273,7 +333,7 @@ table td:last-child {
 form {
     margin: 20px 0;
     border-collapse: collapse;
-    display: grid !important;
+    display: grid;
 }
 
 label {
