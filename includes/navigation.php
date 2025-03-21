@@ -1,9 +1,10 @@
 <!-- Menüleiste -->
-<?php require_once("class/now.class.php"); ?>
+<?php require_once("$_SERVER[DOCUMENT_ROOT]" . "/lib/class/now.class.php"); ?>
 
 <div class="navbar">
+
 <div class="logo">
-<div class="now-box">
+    <div class="now-box">
         <ul>
             <li class="now-tag"><?= Now::tag(); ?></li>
             <li class="now-datum"><?= Now::datum(); ?></li>

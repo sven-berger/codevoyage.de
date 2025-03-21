@@ -69,6 +69,10 @@ button[type="submit"]:hover {
     background-color: #2980b9;
 }
 
+.button-1, .button-2 {
+    margin-right: 8px;
+}
+
 .button-2, button[type="reset"] {
     padding: 10px 20px;
     border: none;
@@ -80,25 +84,11 @@ button[type="submit"]:hover {
     transition: background-color 0.3s ease;
 }
 
-button[type="reset"]:hover {
+button[type="button"].button-2:hover, button[type="reset"]:hover {
     background-color: #e67e22;
 }
 
-button[type="button"] {
-    padding: 10px 20px;
-    border: none;
-    background-color: #e74c3c;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button[type="button"]:hover {
-    background-color: #c0392b;
-}
-
-.button-3, button[type="reset"] {
+.button-3 {
     padding: 10px 20px;
     border: none;
     margin-top: 10px;
@@ -109,8 +99,8 @@ button[type="button"]:hover {
     transition: background-color 0.3s ease;
 }
 
-.button-1, .button-2 {
-    margin-right: 5px;
+button[type="button"].button-3:hover {
+    background-color: brown;
 }
 
 /* Container */       
@@ -174,6 +164,10 @@ button[type="button"]:hover {
 
 .form-login {
     display: block !important;
+}
+
+.form-login input:first-child {
+    margin-right: 5px;
 }
 
 .now-box {
@@ -344,7 +338,7 @@ label {
 
 select, input {
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
     border: 2px solid #eee;
     margin: 10px 0;
 }

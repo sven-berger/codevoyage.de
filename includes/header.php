@@ -1,3 +1,7 @@
+<?php 
+    require_once("includes/session.php");
+?>
+
 <!DOCTYPE html>  
 <html lang="de">  
 <head>  
@@ -30,7 +34,7 @@ tinymce.init({
 <?php 
     $section_beginn = "<div class='section'>";
     $section_ende = "</div>";
-    require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/database-connect.php");
+    // require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/database-connect.php");
 ?>
 
 <body>
@@ -40,4 +44,8 @@ tinymce.init({
 
 <div class="main-content">
 <?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/navigation.php"); ?>
+<?php
 
+if (isset($_SESSION['benutzername'])) {
+    echo "Hallo Sven!";
+}

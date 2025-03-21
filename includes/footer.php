@@ -13,7 +13,7 @@ if (isset($_GET['page'])) {
 ?>
 
 <!-- Überprüfung, ob die Seite in der Datenbank existiert -->
-<?php if (!empty($row)): ?>
+<?php if (!empty($row) && isset($_SESSION['benutzername'])): ?>
     <div class="page-function">
         <ul>
             <li>

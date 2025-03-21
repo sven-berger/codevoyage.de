@@ -1,37 +1,9 @@
 <?php
+    $sql = "SELECT * FROM bankkonten";
+    $statement = $connection->query($sql);
+    $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+    require_once ($_SERVER['DOCUMENT_ROOT'] . "/acp/lib/forms/ueberweisung-taetigen.form.php");
 
-// Konten aus der Datenbank abrufen
-$sql = "SELECT * FROM bankkonten";
-$statement = $connection->query($sql);
-$result = $statement->fetchAll(PDO::FETCH_ASSOC);
-
-?>
-
-<!--- Überweisung tätigen --->
-<h2>Überweisung tätigen</h2>
-<form method="POST" action="">
-    <label for="absendekonto">Absendekonto</label>
-    <select name="absendekonto" id="absendekonto">
-        <?php foreach ($result as $row): ?>
-            <option value="<?= $row['iban'] ?>"><?= $row['iban'] . " (" . $row['inhaber'] . ")" . " => " . "(" . $row['kontostand'] . "€)"; ?></option>
-        <?php endforeach; ?>
-    </select>
-
-    <label for="zielkonto">Zielkonto</label>
-    <select name="zielkonto" id="zielkonto">
-        <?php foreach ($result as $row): ?>
-            <option value="<?= $row['iban'] ?>"><?= $row['iban'] . " (" . $row['inhaber'] . ")" . " => " . "(" . $row['kontostand'] . "€)"; ?></option>
-        <?php endforeach; ?>
-    </select>
-
-    <label for="betrag">Betrag</label>
-    <input type="number" id="betrag" name="betrag" step="0.01" required>
-
-    <button type="submit">Auftrag übermitteln</button>
-    <button type="reset">Zurücksetzen</button>
-</form>
-
-<?php 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $absendekonto = $_POST['absendekonto'];
     $zielkonto = $_POST['zielkonto'];
