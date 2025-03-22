@@ -45,17 +45,24 @@ class UserProfileEdit {
             beschreibung = :beschreibung,
             vorname = :vorname,
             zweitname = :zweitname,
-            nachname = :nachname,
+            nachname = :nachname
             WHERE id = :id";
     
         $statement = $this->connection->prepare($sql);
+        $statement =$this->connection->prepare($sql);
         $statement->bindParam(':benutzername', $data['benutzername']);
         $statement->bindParam(':email', $data['email']);
         $statement->bindParam(':beschreibung', $data['beschreibung']);
         $statement->bindParam(':vorname', $data['vorname']);
         $statement->bindParam(':zweitname', $data['zweitname']);
         $statement->bindParam(':nachname', $data['nachname']);
+        $statement->bindParam(':id', $this->id, PDO::PARAM_INT);
         $statement->execute();
+        return $statement->execute();
+    }
+
+    public function getId() {
+        return $this->id;
     }
     
     public function getBenutzername() {
@@ -80,17 +87,5 @@ class UserProfileEdit {
 
     public function getEmail() {
         return $this->email;
-    }
-}
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $userProfileEdit = new UserProfileEdit($connection, $id);
-    $userProfileEdit->getData($id);
-
-    // Stelle sicher, dass die Daten erfolgreich aktualisiert wurden
-    if ($statement->execute()) {
-        // Weiterleitung
-        header('Location: index.php?page=index');
-        exit();
     }
 }

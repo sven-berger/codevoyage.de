@@ -14,13 +14,21 @@
         $statement = $connection->prepare($sql);
         $statement->execute();
         $benutzergruppen = $statement->fetchAll(PDO::FETCH_ASSOC);
-        
+
         require_once "$_SERVER[DOCUMENT_ROOT]" . "/lib/class/User/UserProfileEdit.class.php";
 
-        $userProfile = new UserProfileEdit($connection, $id);
-        $userProfile->getData($id);
+        $userProfileEdit = new UserProfileEdit($connection, $id);
+        $userProfileEdit->getData($id);
 
         require_once "$_SERVER[DOCUMENT_ROOT]" . "/lib/forms/User/UserProfileEdit.form.php";
+
+        if ($_SERVER["REQUEST_METHOD"] === "POST") {
+            if ($userProfileEdit->dataEditSql($_POST)) {  // ✅ Erfolg prüfen
+                header("Location: index.php?page=user-profile&id=" . $userProfileEdit->getId());
+                exit;
+            }
+        }
+
         ob_end_flush(); 
     ?>
 <?php endif; ?>
