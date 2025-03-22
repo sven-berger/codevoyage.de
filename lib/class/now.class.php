@@ -36,7 +36,7 @@ class Now {
             $user = $statement->fetch(PDO::FETCH_ASSOC);
 
             if ($user) {
-                return !empty($user['vorname']) ? "Hallo {$user['vorname']}" : "Hallo {$user['benutzername']}";
+                return !empty($user['vorname']) ? "Hallo <a href=\"index.php?page=user-profile&id=" . $user['id'] . "\" style='margin-left: 0 !important;'> " . $user['vorname'] . "</a>" : "Hallo " . $user['benutzername'];
             }
         }
         return "Hallo Gast"; // Falls kein Benutzer gefunden wird

@@ -1,4 +1,4 @@
-<?php if (isset($_GET['id'])): ?>
+<?php if (isset($_SESSION['benutzername']) && isset($_GET['id'])): ?>
     <?php 
         // OP für Header-Injection
         ob_start();
@@ -14,11 +14,13 @@
         $statement = $connection->prepare($sql);
         $statement->execute();
         $benutzergruppen = $statement->fetchAll(PDO::FETCH_ASSOC);
-    
-    
-        require_once 'lib/class/User/UserEdit.class.php';
-        require_once 'lib/forms/User/UserEdit.form.php';
+        
+        require_once "$_SERVER[DOCUMENT_ROOT]" . "/lib/class/User/UserProfileEdit.class.php";
 
+        $userProfile = new UserProfileEdit($connection, $id);
+        $userProfile->getData($id);
+
+        require_once "$_SERVER[DOCUMENT_ROOT]" . "/lib/forms/User/UserProfileEdit.form.php";
         ob_end_flush(); 
     ?>
 <?php endif; ?>

@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 // Session beenden
 $_SESSION = [];
