@@ -9,6 +9,7 @@
             <li class="now-tag"><?= Now::tag(); ?></li>
             <li class="now-datum"><?= Now::datum(); ?></li>
             <li class="now-uhrzeit"><?= Now::uhrzeit(); ?> Uhr</li>
+            <li class="now-benutzer"><?= $now->benutzer(); ?></li>
         </ul>
     </div>
 </div>

@@ -1,6 +1,11 @@
 <?php
-
 class Now {
+    private $connection;
+
+    public function __construct($connection) {
+        $this->connection = $connection;
+    }
+
     public static function datum() {
         return date("d.m.Y"); // Datum zurückgeben
     }
@@ -20,6 +25,22 @@ class Now {
             "Saturday" => "Samstag",
             "Sunday" => "Sonntag"
         ];
-        return $tage[$tag]; // Den passenden deutschen Wochentag zurückgeben
+        return $tage[$tag] ?? $tag; // Falls ein unbekannter Tag kommt, Standard-Wert zurückgeben
+    }
+
+    public function benutzer() {
+        if (isset($_SESSION['benutzername'])) {
+            $sql = "SELECT * FROM benutzer WHERE benutzername = :benutzername";
+            $statement = $this->connection->prepare($sql);
+            $statement->execute([':benutzername' => $_SESSION['benutzername']]);
+            $user = $statement->fetch(PDO::FETCH_ASSOC);
+
+            if ($user) {
+                return !empty($user['vorname']) ? "Hallo {$user['vorname']}" : "Hallo {$user['benutzername']}";
+            }
+        }
+        return "Hallo Gast"; // Falls kein Benutzer gefunden wird
     }
 }
+
+$now = new Now($connection);
