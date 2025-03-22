@@ -1,17 +1,17 @@
 <div class="sidebar">
     <h3>Seitenverwaltung</h3>
     <ul>
-        <li><a href="index.php?page=pages">Seitenübersicht</a></li>
-        <li><a href="index.php?page=page-add">Seite hinzufügen</a></li>
+        <li><a href="../acp/index.php?page=pages">Seitenübersicht</a></li>
+        <li><a href="../acp/index.php?page=page-add">Seite hinzufügen</a></li>
     </ul>
     <h3>Benutzerverwaltung</h3>
     <ul>
-        <li><a href="index.php?page=user">Benutzerübersicht</a></li>
-        <li><a href="index.php?page=user-add">Benutzer hinzufügen</a></li>
+        <li><a href="../acp/index.php?page=user">Benutzerübersicht</a></li>
+        <li><a href="../acp/index.php?page=user-add">Benutzer hinzufügen</a></li>
     </ul>
     <h3>Bankkonten</h3>
     <ul>
-        <li><a href="index.php?page=ueberweisung-taetigen">Überweisung tätigen</a></li>
+        <li><a href="../acp/index.php?page=sepa">Überweisung tätigen</a></li>
     </ul>
 
     <div class="sidebar-end">  

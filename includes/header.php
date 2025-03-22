@@ -44,8 +44,3 @@ tinymce.init({
 
 <div class="main-content">
 <?php require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/navigation.php"); ?>
-<?php
-
-if (isset($_SESSION['benutzername'])) {
-    echo "Hallo Sven!";
-}
